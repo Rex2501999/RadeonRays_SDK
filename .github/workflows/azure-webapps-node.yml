@@ -76,3 +76,43 @@ jobs:
         app-name: ${{ env.AZURE_WEBAPP_NAME }}
         publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
         package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+                    - 名稱：快取
+  用途：actions/cache@v4.2.3
+  和：
+    # 要快取和復原的檔案、目錄和通配符模式的列表
+    小路：
+    # 用於復原和保存快取的明確金鑰
+    鑰匙：
+    # 列出前綴匹配的鍵的有序多行字串，用於在鍵未發生快取命中時恢復陳舊的快取。注意，在這種情況下，“cache-hit”返回 false。
+    恢復鍵：#可選
+    # 上傳過程中用來分割大檔案的區塊大小，以位元組為單位
+    上傳區塊大小：#可選
+    # 啟用時選用布林值，讓 Windows 運行器保存或還原可以在其他平台上分別還原或儲存的快取
+    enableCrossOsArchive: # 可選，預設為 false
+    # 如果未找到快取項目，則工作流程失敗
+    fail-on-cache-miss: #可選，預設為false
+    # 檢查給定輸入（key、restore-keys）的快取項目是否存在，無需下載快取
+    lookup-only: # 可選，預設為 false
+    # 即使先前的步驟失敗，也要執行後續步驟來保存快取
+    save-always: # 可選，預設為 false
+                      - 名稱：快取
+  用途：actions/cache@v4.2.3
+  和：
+    # 要快取和復原的檔案、目錄和通配符模式的列表
+    小路：
+    # 用於復原和保存快取的明確金鑰
+    鑰匙：
+    # 列出前綴匹配的鍵的有序多行字串，用於在鍵未發生快取命中時恢復陳舊的快取。注意，在這種情況下，“cache-hit”返回 false。
+    恢復鍵：#可選
+    # 上傳過程中用來分割大檔案的區塊大小，以位元組為單位
+    上傳區塊大小：#可選
+    # 啟用時選用布林值，讓 Windows 運行器保存或還原可以在其他平台上分別還原或儲存的快取
+    enableCrossOsArchive: # 可選，預設為 false
+    # 如果未找到快取項目，則工作流程失敗
+    fail-on-cache-miss: #可選，預設為false
+    # 檢查給定輸入（key、restore-keys）的快取項目是否存在，無需下載快取
+    lookup-only: # 可選，預設為 false
+    # 即使先前的步驟失敗，也要執行後續步驟來保存快取
+    save-always: # 可選，預設為 false
+
+          
